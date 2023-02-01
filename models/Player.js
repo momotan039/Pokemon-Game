@@ -77,8 +77,6 @@ function choosePlayer(pokemon) {
     }
 
 }
-=======
-}
 
 //Pokemon images for selection
 const pikachu = document.querySelector('#pikachu')
