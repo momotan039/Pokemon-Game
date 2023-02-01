@@ -1,12 +1,14 @@
 const ctrPanel = document.querySelector('.controls-panel')
+const popUpSound = document.getElementById('popUpSound')
+const themeSound = document.getElementById('themeSound')
 
 function closeSettings() {
-    // playSound(pop_up_sound,1)
+    popUpSound.play()
     ctrPanel.classList.remove('show')
 }
 
 function openSettings() {
-    // playSound(pop_up_sound,1)
+    popUpSound.play()
     ctrPanel.classList.add('show')
 }
 
@@ -18,3 +20,9 @@ function renderSoundControls(){
     sfxBtn.checked=isSfxPlaying
 }
 
+const idListener=window.addEventListener('mouseover',()=>{
+    themeSound.play()
+    setTimeout(()=>{
+        window.removeEventListener('mouseover',idListener)
+    },500)
+})
