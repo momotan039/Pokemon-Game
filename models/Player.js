@@ -59,18 +59,17 @@ class Player {
     }
 }
 
-//Player create function called from Event listener
-let player
+//Create player and push to localStorage (called from event listeners)
 function choosePlayer(pokemon) {
     switch (pokemon) {
         case 'pikachu':
-            player = new Player('Pikachu', 3, 3, 3, 1, 100, 100, 0, 1000, "/assets/player/pikachu.png")
+            localStorage.setItem('player', JSON.stringify(new Player('Pikachu', 3, 3, 3, 1, 100, 100, 0, 1000, "/assets/player/pikachu.png")))
             break;
         case 'charmander':
-            player = new Player('Charmander', 3, 3, 3, 1, 100, 100, 0, 1000, "/assets/player/charmander.png")
+            localStorage.setItem('player', JSON.stringify(new Player('Charmander', 3, 3, 3, 1, 100, 100, 0, 1000, "/assets/player/charmander.png")))
             break;
         case 'squirtle':
-            player = new Player('Squirtle', 3, 3, 3, 1, 100, 100, 0, 1000, "/assets/player/squirtle.png")
+            localStorage.setItem('player', JSON.stringify(new Player('Squirtle', 3, 3, 3, 1, 100, 100, 0, 1000, "/assets/player/squirtle.png")))
             break;
         default:
             break;
