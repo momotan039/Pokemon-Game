@@ -10,7 +10,8 @@ html,body{
     position: relative;
 }
 .home-page-section{
-    background-color: #000000d6;
+    background: linear-gradient(0deg, black, #000000a6),url(./images/background.png) center no-repeat;
+    background-size: cover;
 }
 .title{
     font-size: 2rem;
@@ -115,7 +116,7 @@ html,body{
     justify-content: center;
     align-items: center;
     z-index: 1;
-    background: #02020226;
+    background: #020202b3;
  }
 
  .controls-panel .panel{
