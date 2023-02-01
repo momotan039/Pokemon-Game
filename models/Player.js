@@ -14,11 +14,11 @@ class Player {
     skillpoints = 3
     gold = 0
     potions = 1
-    attack() {
+    attack() {//attack method returns an integer of damage to deal to monster
         let roll = Math.floor(Math.random() * 20) + 1
         return (roll + this.strength) * this.level
     }
-    heal() {
+    heal() {//checks if there are potions and if health is lower than max health and heals accordingly
         if (this.potions == 0) {
             return 'no potions left';
         } else if (this.hp === this.maxhp) {
@@ -28,7 +28,7 @@ class Player {
             return 'healed';
         }
     }
-    spendSkillPoints(skill) {
+    spendSkillPoints(skill) {//spends skill points if conditions are met
 
         if (this.skillpoints == 0) {
             return 'no sp left'
@@ -51,10 +51,10 @@ class Player {
             }
         }
     }
-    playerRollDice() {
+    playerRollDice() {//rolls dice to determine who starts first
         return Math.floor(Math.random() * 20) + 1
     }
-    playerRun() {
+    playerRun() {//!TO BE IMPLEMENTED
         console.log('load location screen....');
     }
 }
@@ -77,38 +77,35 @@ function choosePlayer(pokemon) {
     }
 }
 
-//Pokemons
+//Pokemon images for selection
 const pikachu = document.querySelector('#pikachu')
 const charmander = document.querySelector('#charmander')
 const squirtle = document.querySelector('#squirtle')
-//sounds
+//selection sounds
 const pSound = document.querySelector('#pSound')
 const sSound = document.querySelector('#sSound')
 const cSound = document.querySelector('#cSound')
 const cSoundStart = document.querySelector('#cSoundStart')
 const pSoundStart = document.querySelector('#pSoundStart')
 const sSoundStart = document.querySelector('#sSoundStart')
-
+//selection listeners
 pikachu.addEventListener('click', () => {
     choosePlayer('pikachu')
     pSoundStart.volume = 0.5
     pSoundStart.play()
-    console.log(player);
 })
 charmander.addEventListener('click', () => {
     choosePlayer('charmander')
     cSoundStart.volume = 0.5
     cSoundStart.play()
-    console.log(player);
 })
 squirtle.addEventListener('click', () => {
     choosePlayer('squirtle')
     sSoundStart.volume = 0.5
     sSoundStart.play()
-    console.log(player);
 })
 
-//pokehovers
+//pokehovers the play a sound when you hover a pokemon on selection screen
 
 pikachu.addEventListener('mouseover', () => {
     pSound.volume = 0.5
