@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prg game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <section class="home-page-section">
+        <header>
+            <div class="title">Pokemon Game</div>
+        </header>
+        <div class="body">
+            <a class="mybtn" href="player/player.html">Start</a>
+        </div>
+    </section>
+
+    <button onclick="openSettings()" class="control-button mybtn"><i class="fa-sharp fa-solid fa-sliders"></i></button>
+
+    <div class="controls-panel">
+        <button onclick="closeSettings()" class="control-button mybtn"><i class="fa-solid fa-close"></i></button>
+        <div class="panel">
+            <div class="title">
+                <span>Settings</span>
+            </div>
+            <div class="body">
+                <div class="row">
+                    <span>Sfx</span>
+                    <input checked id="sfxBtn" type="checkbox">
+                    <label for="sfxBtn"></label>
+                </div>
+                <div class="row">
+                    <span>Bg Sound</span>
+                    <input checked id="bg_soundBtn" type="checkbox">
+                    <label for="bg_soundBtn"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
