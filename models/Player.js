@@ -75,6 +75,9 @@ function choosePlayer(pokemon) {
         default:
             break;
     }
+
+}
+=======
 }
 
 //Pokemon images for selection
@@ -119,3 +122,4 @@ squirtle.addEventListener('mouseover', () => {
     sSound.volume = 0.5
     sSound.play()
 })
+
