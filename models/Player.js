@@ -1,6 +1,6 @@
 class Player {
-    constructor(id, strength, defence, dexterity, level, maxhp, hp, exp, maxexp) {
-        this.id = id
+    constructor(name, strength, defence, dexterity, level, maxhp, hp, exp, maxexp, imgsrc) {
+        this.name = name
         this.strength = strength
         this.defence = defence
         this.dexterity = dexterity
@@ -9,6 +9,7 @@ class Player {
         this.hp = hp
         this.exp = exp
         this.maxexp = maxexp
+        this.avatar = imgsrc
     }
     skillpoints = 3
     gold = 0
@@ -58,4 +59,66 @@ class Player {
     }
 }
 
-let player = new Player(1, 3, 3, 3, 1, 100, 100, 0, 1000)
+//Player create function called from Event listener
+let player
+function choosePlayer(pokemon) {
+    switch (pokemon) {
+        case 'pikachu':
+            player = new Player('Pikachu', 3, 3, 3, 1, 100, 100, 0, 1000, "/assets/player/pikachu.png")
+            break;
+        case 'charmander':
+            player = new Player('Charmander', 3, 3, 3, 1, 100, 100, 0, 1000, "/assets/player/charmander.png")
+            break;
+        case 'squirtle':
+            player = new Player('Squirtle', 3, 3, 3, 1, 100, 100, 0, 1000, "/assets/player/squirtle.png")
+            break;
+        default:
+            break;
+    }
+}
+
+//Pokemons
+const pikachu = document.querySelector('#pikachu')
+const charmander = document.querySelector('#charmander')
+const squirtle = document.querySelector('#squirtle')
+//sounds
+const pSound = document.querySelector('#pSound')
+const sSound = document.querySelector('#sSound')
+const cSound = document.querySelector('#cSound')
+const cSoundStart = document.querySelector('#cSoundStart')
+const pSoundStart = document.querySelector('#pSoundStart')
+const sSoundStart = document.querySelector('#sSoundStart')
+
+pikachu.addEventListener('click', () => {
+    choosePlayer('pikachu')
+    pSoundStart.volume = 0.5
+    pSoundStart.play()
+    console.log(player);
+})
+charmander.addEventListener('click', () => {
+    choosePlayer('charmander')
+    cSoundStart.volume = 0.5
+    cSoundStart.play()
+    console.log(player);
+})
+squirtle.addEventListener('click', () => {
+    choosePlayer('squirtle')
+    sSoundStart.volume = 0.5
+    sSoundStart.play()
+    console.log(player);
+})
+
+//pokehovers
+
+pikachu.addEventListener('mouseover', () => {
+    pSound.volume = 0.5
+    pSound.play()
+})
+charmander.addEventListener('mouseover', () => {
+    cSound.volume = 0.5
+    cSound.play()
+})
+squirtle.addEventListener('mouseover', () => {
+    sSound.volume = 0.5
+    sSound.play()
+})
