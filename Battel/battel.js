@@ -119,16 +119,17 @@ function firstHit() {
    }
 }
 function hit() {
+    debugger
    if (currentPlayer === 'monster') {
       let hitpower = monsterAttack()
-      player.hp = Number(player.hp) - hitpower;
+      player.hp = Number(player.hp) + hitpower;
       player_deatils.innerHTML = ''
       currentPlayer = 'player'
       checkWinnner()
       initPlayer()
    } else if (currentPlayer === 'player') {
       let hitpower = monsterAttack()
-      current_monster.healthPoints = Number(current_monster.healthPoints) - hitpower;
+      current_monster.healthPoints = Number(current_monster.healthPoints) + hitpower;
       monster_deatils.innerHTML = ''
       currentPlayer = 'monster'
       checkWinnner()
