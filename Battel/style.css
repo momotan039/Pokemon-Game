@@ -3,12 +3,29 @@
     background-size: cover;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .game button{
     font-size: 20px;
     width: max-content;
+}
+.game .detials{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.game .detials div ul{
+    color: white;
+    list-style-type: none;
+    font-size: 28px;
+}
+.game .detials div ul li{
+    font-weight: bold;
+}
+.game .detials div ul span{
+    font-weight: 500;
 }
 .game .controls{
     display: flex;
@@ -25,7 +42,7 @@
 }
 .game #player,
 .game #monster{
-    background-color: red;
     width: 200px;
     height: 200px;
+    filter: drop-shadow(2px 4px 6px white);
 }
