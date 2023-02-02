@@ -57,28 +57,34 @@ export default class Monster {
     this.src = src
     this.location = location;
   }
-
-static defineLocation(monster, i) {
-      if (i >= 0 && i <= 5) {
-        monster.location = "Canalave";
-      }
-      else if (i >= 6 && i <= 11) {
-        monster.location = "Fire";
-      }
-      else if (i >= 12 && i <= 17) {
-        monster.location = "Pasatoria";
-      }
-      else if (i >= 18 && i <= 23) {
-        monster.location = "Goldenrod";
-      }
+  monsterRollDice() {//rolls dice to determine who starts first
+    return Math.floor(Math.random() * 20) + 1
+  }
+  attack() {//attack method returns an integer of damage to deal to monster
+    let roll = Math.floor(Math.random() * 20) + 1
+    return (roll + this.strength) * this.level
+  }
+  static defineLocation(monster, i) {
+    if (i >= 0 && i <= 5) {
+      monster.location = "Canalave";
     }
+    else if (i >= 6 && i <= 11) {
+      monster.location = "Fire";
+    }
+    else if (i >= 12 && i <= 17) {
+      monster.location = "Pasatoria";
+    }
+    else if (i >= 18 && i <= 23) {
+      monster.location = "Goldenrod";
+    }
+  }
 
   static randomIntFromInterval(min, max) {
     // min and max included
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
-    static generateMonsterArray(locationInput, player) {
+  static generateMonsterArray(locationInput, player) {
     const generatedMonsters = [];
     for (let i = 0; i < monstersArray.length; ++i) {
       const newMonster = new Monster(
@@ -93,11 +99,11 @@ static defineLocation(monster, i) {
         this.randomIntFromInterval(1, 5),
         this.src = `../monsters/assets/img/${i}.png`
       );
-        this.defineLocation(newMonster, i)
+      this.defineLocation(newMonster, i)
 
-        if (newMonster.location === locationInput) {
+      if (newMonster.location === locationInput) {
         generatedMonsters.push(newMonster);
-        }
+      }
     }
     return generatedMonsters;
     // localStorage.setItem('enemies', JSON.stringify(generatedMonsters))
