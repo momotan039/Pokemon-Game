@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Merienda:wght@800&family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap');
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -8,19 +10,31 @@ html,body{
     height: 100%;
     width: 100%;
     position: relative;
+    font-family: 'Merienda', cursive;
+
 }
 .home-page-section{
     background: linear-gradient(0deg, black, #000000a6),url(./images/background.png) center no-repeat;
     background-size: cover;
 }
 .title{
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 2.5rem;
+    font-weight: 900;
     font-family: monospace;
     text-align: center;
     padding: 10px;
     background: linear-gradient(90deg, #940b0b, #3a0606);
     color: white;
+    font-family: 'Merienda', cursive;
+    background: rgb(54, 95, 172);
+    background: radial-gradient(
+    circle,
+    rgba(54, 95, 172, 1) 0%,
+    rgba(255, 204, 1, 1) 0%,
+    rgba(54, 95, 172, 1) 100%
+    );
+    opacity: 0.6;
+
 }
 .home-page-section .body{
     display: flex;
@@ -36,10 +50,10 @@ html,body{
 .mybtn {
     padding: 10px;
     cursor: pointer;
-    font-size: 50px;
+    font-size: 30px;
     color: white;
     border-radius: 20px;
-    margin-bottom: 10px;
+    margin-bottom:-190px;
     background: linear-gradient(90deg, #940b0b, #3a0606);
     position: relative;
     overflow: hidden;
@@ -49,9 +63,25 @@ html,body{
     border: none;
     max-width: 300px;
     width: 100%;
+    font-family: 'Merienda', cursive;
+    background: rgb(54, 95, 172);
+    background: radial-gradient(
+    circle,
+    rgba(54, 95, 172, 1) 0%,
+    rgba(255, 204, 1, 1) 0%,
+    rgba(54, 95, 172, 1) 100%
+    );
+    opacity: 0.7;
 }
 
-
+.mybtn:hover{
+    font-size: 35px;
+    color: gold;
+    color: rgb(255, 201, 1);
+  text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5,
+    -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5,
+    -2px 0px 0 #4074b5, 0px -2px 0 #4074b5, -2px 0px 0px rgba(55, 94, 170, 0);
+}
 .mybtn::after{
     content: '';
     position: absolute;
@@ -84,6 +114,7 @@ html,body{
     transform-origin: center;
     border-radius: 50%;
     transform: scale(0);
+    
 }
 
 .mybtn:active::before{
@@ -95,6 +126,7 @@ html,body{
 
 .settings{
  opacity: 0;
+
 }
 
 .controls-panel.show
@@ -199,4 +231,6 @@ html,body{
     top: 63px !important;
     right: 8px !important;
     width: 73px !important;
+    margin-top: -55px;
+
 }

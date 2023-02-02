@@ -1,4 +1,6 @@
 
+  @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Merienda:wght@800&family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap');
+
 body{
     height: 100vh;
     width: 100%;
@@ -12,20 +14,22 @@ body{
     rgba(255, 204, 1, 1) 0%,
     rgba(54, 95, 172, 1) 100%
     );
+    font-family: 'Merienda', cursive;
 }
 
 
 .backGround-img-container{
 
     height: 60vh;
-    width: 100%;
+    width: 90%;
     /* position: relative; */
     display: grid;
     grid-template-areas:
     'location1 location2 location3'
     'location4 location5 location5'
     ;
-    grid-gap: 5px;
+    grid-gap: 20px;
+    margin-left: 100px;
 }
 
 
@@ -47,6 +51,7 @@ body{
 .location1-div{
     grid-area: location1;
 }
+
 .location2-div{
     grid-area: location2;
     
@@ -66,14 +71,38 @@ body{
 img{
     height: 150px;
     width: 300px;
+    border-top-right-radius: 70px;
 }
 
 button{
     width: 300px;
-    height: 20px;
+    height: 50px;
+    background-color: black;
+    
+    opacity: 0.5;
+    color: aliceblue;
+    border-bottom-left-radius: 70px;
+    font-size: 20px;
+    font-family: 'Merienda', cursive;
 }
+button:hover{
+    font-size: 25px;
+    color:gold;
+    cursor: pointer;
+    color: gold;
+    color: rgb(255, 201, 1);
+  text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5,
+    -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5,
+    -2px 0px 0 #4074b5, 0px -2px 0 #4074b5, -2px 0px 0px rgba(55, 94, 170, 0);
+}
+
 
 h1{
     text-align: center;
     font-size: 300%;
+    color: gold;
+    color: rgb(255, 201, 1);
+  text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5,
+    -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5,
+    -2px 0px 0 #4074b5, 0px -2px 0 #4074b5, -2px 0px 0px rgba(55, 94, 170, 0);
 }
