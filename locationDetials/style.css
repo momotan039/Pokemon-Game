@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(54, 95, 172);
+  background: radial-gradient(
+    circle,
+    rgba(54, 95, 172, 1) 0%,
+    rgba(255, 204, 1, 1) 0%,
+    rgba(54, 95, 172, 1) 100%
+  );
+}
+#title {
+  font-size: 7rem;
+  color: rgb(255, 201, 1);
+  text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5,
+    -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5,
+    -2px 0px 0 #4074b5, 0px -2px 0 #4074b5, -2px 0px 0px rgba(55, 94, 170, 0);
+}
+.locationsContainer {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.locationBox {
+  width: 25rem;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  border: black 5px solid;
+  margin-top: 1rem;
+  background-color: rgba(255, 255, 255, 0.6);
+}
