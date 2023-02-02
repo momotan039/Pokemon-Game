@@ -2,16 +2,16 @@
 body{
     height: 100vh;
     width: 100%;
-    background-image: url(./models/img/back.jpg);
+    /* background-image: url(./models/img/back.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
-    /* background: rgb(54, 95, 172);
+    background: rgb(54, 95, 172);
     background: radial-gradient(
     circle,
     rgba(54, 95, 172, 1) 0%,
     rgba(255, 204, 1, 1) 0%,
     rgba(54, 95, 172, 1) 100%
-    ); */
+    );
 }
 
 

@@ -93,16 +93,25 @@ pikachu.addEventListener('click', () => {
     choosePlayer('pikachu')
     pSoundStart.volume = 0.5
     pSoundStart.play()
+    setTimeout(() => {
+    location.href='/location/LOCATION.HTML'
+    }, 1000);
 })
 charmander.addEventListener('click', () => {
     choosePlayer('charmander')
     cSoundStart.volume = 0.5
     cSoundStart.play()
+    setTimeout(() => {
+        location.href='/location/LOCATION.HTML'
+        }, 1000);
 })
 squirtle.addEventListener('click', () => {
     choosePlayer('squirtle')
     sSoundStart.volume = 0.5
     sSoundStart.play()
+    setTimeout(() => {
+        location.href='/location/LOCATION.HTML'
+        }, 1000);
 })
 
 //pokehovers the play a sound when you hover a pokemon on selection screen

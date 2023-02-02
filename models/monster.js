@@ -28,10 +28,10 @@ const monstersArray = [
   "Weepinbell",
 ];
 
-const player1 = new Player("someName", 2, 3, 4, 5);
-console.log(player1);
+// const player1 = new Player("someName", 2, 3, 4, 5);
+// console.log(player1);
 
-class Monster {
+export default class Monster {
   constructor(
     number,
     name,
@@ -58,18 +58,18 @@ class Monster {
     this.location = location;
   }
 
-  static defineLocation(monster, i) {
+static defineLocation(monster, i) {
       if (i >= 0 && i <= 5) {
-        monster.location = "canalaveGymName";
+        monster.location = "Canalave";
       }
       else if (i >= 6 && i <= 11) {
-        monster.location = "fireGymName";
+        monster.location = "Fire";
       }
       else if (i >= 12 && i <= 17) {
-        monster.location = "pasatoriaGymName";
+        monster.location = "Pasatoria";
       }
       else if (i >= 18 && i <= 23) {
-        monster.location = "goldenrodGymName";
+        monster.location = "Goldenrod";
       }
     }
 
@@ -78,7 +78,7 @@ class Monster {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
-  static generateMonsterArray(locationInput, player) {
+    static generateMonsterArray(locationInput, player) {
     const generatedMonsters = [];
     for (let i = 0; i < monstersArray.length; ++i) {
       const newMonster = new Monster(
@@ -99,7 +99,9 @@ class Monster {
         generatedMonsters.push(newMonster);
         }
     }
-    localStorage.setItem('enemies', JSON.stringify(generatedMonsters))
+    return generatedMonsters;
+    // localStorage.setItem('enemies', JSON.stringify(generatedMonsters))
   }
 }
-console.log(Monster.generateMonsterArray("canalaveGymName", player1));
+// console.log(Monster.generateMonsterArray("canalaveGymName", player1));
+
