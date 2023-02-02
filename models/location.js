@@ -27,29 +27,29 @@ class Location{
 
 let location;
 name1.addEventListener('click', ()=>{
-    location= new Location('Goldenrod', './models/img/Goldenrod_Gym_anime.png', 5);
+    location= new Location('Goldenrod', './img/Goldenrod_Gym_anime.png', 5);
     localStorage.setItem('location', JSON.stringify(location))
     location.href = '#'
 })
 
 name2.addEventListener('click', ()=>{
-    location= new Location('Castelia', './models/img/Castelia_Gym_field.webp', 5);
+    location= new Location('Castelia', './img/Castelia_Gym_field.webp', 5);
     localStorage.setItem('location', JSON.stringify(location))
 
 })
 
 name3.addEventListener('click', ()=>{
-    location= new Location('Canalave', './models/img/Canalave_Gym_anime.png', 5);
+    location= new Location('Canalave', './img/Canalave_Gym_anime.png', 5);
     localStorage.setItem('location', JSON.stringify(location))
 })
 
 name4.addEventListener('click', ()=>{
-    location= new Location('Pasatoria', './models/img/PastoriaGym.png', 5);
+    location= new Location('Pasatoria', './img/PastoriaGym.png', 5);
     localStorage.setItem('location', JSON.stringify(location))
 
 })
 name5.addEventListener('click', ()=>{
-    location= new Location('Fire', './models/img/firelocations.jpg', 5);
+    location= new Location('Fire', './img/firelocations.jpg', 5);
     localStorage.setItem('location', JSON.stringify(location))
 })
 
