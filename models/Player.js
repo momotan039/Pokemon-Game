@@ -63,13 +63,13 @@ class Player {
 function choosePlayer(pokemon) {
     switch (pokemon) {
         case 'pikachu':
-            localStorage.setItem('player', JSON.stringify(new Player('Pikachu', 3, 3, 3, 1, 100, 100, 0, 1000, "/assets/player/pikachu.png")))
+            localStorage.setItem('player', JSON.stringify(new Player('Pikachu', 3, 3, 3, 1, 100, 100, 0, 1000, "../player/assets/player/pikachu.png")))
             break;
         case 'charmander':
-            localStorage.setItem('player', JSON.stringify(new Player('Charmander', 3, 3, 3, 1, 100, 100, 0, 1000, "/assets/player/charmander.png")))
+            localStorage.setItem('player', JSON.stringify(new Player('Charmander', 3, 3, 3, 1, 100, 100, 0, 1000, "../player/assets/player/charmander.png")))
             break;
         case 'squirtle':
-            localStorage.setItem('player', JSON.stringify(new Player('Squirtle', 3, 3, 3, 1, 100, 100, 0, 1000, "/assets/player/squirtle.png")))
+            localStorage.setItem('player', JSON.stringify(new Player('Squirtle', 3, 3, 3, 1, 100, 100, 0, 1000, "../player/assets/player/squirtle.png")))
             break;
         default:
             break;
@@ -94,7 +94,7 @@ pikachu.addEventListener('click', () => {
     pSoundStart.volume = 0.5
     pSoundStart.play()
     setTimeout(() => {
-    location.href='/location/LOCATION.HTML'
+        location.href = '/location/LOCATION.HTML'
     }, 1000);
 })
 charmander.addEventListener('click', () => {
@@ -102,16 +102,16 @@ charmander.addEventListener('click', () => {
     cSoundStart.volume = 0.5
     cSoundStart.play()
     setTimeout(() => {
-        location.href='/location/LOCATION.HTML'
-        }, 1000);
+        location.href = '/location/LOCATION.HTML'
+    }, 1000);
 })
 squirtle.addEventListener('click', () => {
     choosePlayer('squirtle')
     sSoundStart.volume = 0.5
     sSoundStart.play()
     setTimeout(() => {
-        location.href='/location/LOCATION.HTML'
-        }, 1000);
+        location.href = '/location/LOCATION.HTML'
+    }, 1000);
 })
 
 //pokehovers the play a sound when you hover a pokemon on selection screen
